@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="smoke" verbose="8">
+    <listeners>
+        <listener class-name="com.propper.listeners.CustomReporter"/>
+    </listeners>
+
+    <test name="GuestCheckoutTestFirefox">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="nodeURL"
+                   value=""/> <!--  any server/machine URL where grid is connected or cloud url e.g SauceLabs,BrowserStack etc -->
+        <classes>
+            <class name="com.propper.tests.web.CheckoutTest"/>
+        </classes>
+    </test>
+    <test name="GuestCheckoutTestChrome">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="nodeURL"
+                   value=""/> <!--  any server/machine URL where grid is connected or cloud url e.g SauceLabs,BrowserStack etc -->
+        <classes>
+            <class name="com.propper.tests.web.CheckoutTest"/>
+        </classes>
+    </test>
+    <test name="GuestCheckoutTestResponsive">
+        <parameter name="browser" value="chrome_emulator"/>
+        <parameter name="nodeURL"
+                   value=""/> <!--  any server/machine URL where grid is connected or cloud url e.g SauceLabs,BrowserStack etc -->
+        <classes>
+            <class name="com.propper.tests.mobile.MCheckoutTest"/>
+        </classes>
+    </test>
+<!--    <test name="GuestCheckoutTestchrome">-->
+<!--        <parameter name="browser" value="chrome"/>-->
+<!--        <parameter name="nodeURL" value=""/>-->
+<!--        <classes>-->
+<!--            <class name="com.propper.tests.web.CheckoutTest">-->
+<!--                <methods>-->
+<!--                    <include name="validate_checkout"/>-->
+<!--                    <include name="validate_checkout_with_qty_three"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="GuestCheckoutTestResponsive">-->
+<!--        <parameter name="browser" value="chrome_emulator"/>-->
+<!--        <parameter name="nodeURL" value=""/>-->
+<!--        <classes>-->
+<!--            <class name="com.propper.tests.web.CheckoutTest">-->
+<!--                <methods>-->
+<!--                    <include name="validate_checkout"/>-->
+<!--                    <include name="validate_checkout_with_qty_three"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+</suite>
